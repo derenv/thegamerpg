@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.2" tiledversion="1.2.2" name="Stonework_gaps" tilewidth="32" tileheight="32" tilecount="30" columns="5">
- <image source="../../../../Downloads/Stonework_gaps.png" width="160" height="192"/>
+<tileset name="Stonework_gaps" tilewidth="32" tileheight="32" tilecount="30" columns="5">
+ <image source="source/Stonework_gaps.png" width="160" height="192"/>
  <tile id="0">
   <objectgroup draworder="index">
    <object id="2" x="0" y="0" width="16" height="32"/>

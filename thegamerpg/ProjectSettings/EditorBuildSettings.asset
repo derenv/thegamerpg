@@ -26,3 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/temple.unity
     guid: 334e11a0e3bf34d4d84ba40aba578119
+  - enabled: 1
+    path: Assets/Scenes/wizardtower_groundfloor.unity
+    guid: 83563b0967769b209adb28afb15e2e7d
+  - enabled: 1
+    path: Assets/Scenes/wizardtower_outside.unity
+    guid: 79f010adc8b06c8489f012ef11f5dedb
+  m_configObjects: {}

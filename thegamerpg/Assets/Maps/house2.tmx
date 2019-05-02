@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.2" tiledversion="1.2.2" orientation="orthogonal" renderorder="left-down" width="14" height="9" tilewidth="32" tileheight="32" infinite="0" nextlayerid="19" nextobjectid="5">
- <tileset firstgid="1" source="../../../../../Documents/2 - COMPUTING/tilesets &amp; maps/tilesets/Stonework3.tsx"/>
- <tileset firstgid="65" source="../../../../../Documents/2 - COMPUTING/tilesets &amp; maps/tilesets/indoor_floors.tsx"/>
- <tileset firstgid="77" source="../../../../../Documents/2 - COMPUTING/tilesets &amp; maps/tilesets/furniture.tsx"/>
- <tileset firstgid="113" source="../../../../../Documents/2 - COMPUTING/tilesets &amp; maps/tilesets/miscobjects.tsx"/>
- <layer id="15" name="Ground" width="14" height="9">
+<map version="1.0" tiledversion="1.1.6" orientation="orthogonal" renderorder="left-down" width="14" height="9" tilewidth="32" tileheight="32" infinite="0" nextobjectid="5">
+ <tileset firstgid="1" source="../Tilesets/Stonework3.tsx"/>
+ <tileset firstgid="65" source="../Tilesets/indoor_floors.tsx"/>
+ <tileset firstgid="77" source="../Tilesets/furniture.tsx"/>
+ <tileset firstgid="113" source="../Tilesets/miscobjects.tsx"/>
+ <layer name="Ground" width="14" height="9">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,72,72,72,72,72,72,72,72,72,72,72,72,0,
-0,72,72,72,72,72,72,72,72,72,72,72,72,0,
-0,72,72,72,72,72,72,72,72,72,72,72,72,0,
+0,20,72,72,72,72,72,72,72,72,72,72,20,0,
+0,20,72,72,72,72,72,72,72,72,72,72,20,0,
 0,72,72,72,72,72,72,72,72,72,69,72,72,0,
 0,72,72,69,72,69,72,72,72,69,69,69,72,0,
 0,72,72,69,69,69,69,72,72,72,69,72,72,0,
@@ -17,7 +17,7 @@
 0,0,0,0,0,72,72,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer id="16" name="Objects" width="14" height="9">
+ <layer name="Objects" width="14" height="9">
   <properties>
    <property name="unity:sortingLayerName" value="WorldObjects"/>
    <property name="unity:sortingOrder" type="int" value="0"/>
@@ -34,12 +34,12 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer id="17" name="Walls" width="14" height="9">
+ <layer name="Walls" width="14" height="9">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,1,1,1,1,1,1,1,1,1,1,1,1,0,
-0,1,20,20,20,20,20,20,20,20,20,20,16,0,
-0,1,22,22,22,22,22,22,22,22,22,22,1,0,
+0,5,20,20,20,20,20,20,20,20,20,20,2,0,
+0,5,22,22,22,22,22,22,22,22,22,22,2,0,
 0,5,0,0,0,0,0,0,0,0,0,115,2,0,
 0,10,0,0,0,0,0,0,0,0,0,115,12,0,
 0,24,0,0,0,0,0,0,0,0,0,0,21,0,
@@ -47,7 +47,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer id="18" name="Wall Objects" width="14" height="9">
+ <layer name="Wall Objects" width="14" height="9">
   <properties>
    <property name="unity:sortingLayerName" value="WorldObjects"/>
    <property name="unity:sortingOrder" type="int" value="0"/>
@@ -64,7 +64,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup id="10" name="Boundaries">
+ <objectgroup name="Boundaries">
   <object id="2" x="32" y="256" width="128" height="32"/>
   <object id="3" x="224" y="256" width="192" height="32"/>
  </objectgroup>

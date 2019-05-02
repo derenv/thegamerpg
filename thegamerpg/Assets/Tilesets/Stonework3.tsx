@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.2" tiledversion="1.2.2" name="Stonework3" tilewidth="32" tileheight="32" tilecount="64" columns="8">
- <image source="../../../../Downloads/Stonework6.png" width="256" height="256"/>
+<tileset name="Stonework3" tilewidth="32" tileheight="32" tilecount="64" columns="8">
+ <image source="source/Stonework6.png" width="256" height="256"/>
  <terraintypes>
   <terrain name="Black-Stonework" tile="0"/>
   <terrain name="Grey-Stonework" tile="19"/>
