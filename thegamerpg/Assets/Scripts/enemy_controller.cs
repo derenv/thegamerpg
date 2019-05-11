@@ -13,8 +13,8 @@ public class enemy_controller : MonoBehaviour {
 	public float time_to_move;
 	private float time_to_move_counter;
 
-	private Vector2 last_move;
-	private Vector3 move_direction;
+	public Vector2 last_move;
+	public Vector2 move_direction;
 
 	private Animator anim;
 
@@ -27,6 +27,8 @@ public class enemy_controller : MonoBehaviour {
 	private Vector2 min_walk_point;
 	private Vector2 max_walk_point;
 	private bool walk_zone_exists;
+
+	public bool can_move;
 	//====================
 
 	/* Start method
@@ -54,6 +56,12 @@ public class enemy_controller : MonoBehaviour {
 	 * called once per frame
 	 */
 	void Update(){
+		//check if game stopped
+		if(!can_move){
+			rigid_body.velocity = Vector2.zero;
+			return;
+		}
+
 		//check if moving
 		if (moving) {
 			//decrement counter
@@ -63,19 +71,19 @@ public class enemy_controller : MonoBehaviour {
 			if (walk_zone_exists) {
 				if (transform.position.y > max_walk_point.y) {
 					moving = false;
-					move_direction = new Vector3(move_direction.x,Random.Range(-1f,0f) * move_speed);
+					move_direction = new Vector2(move_direction.x,Random.Range(-1f,0f) * move_speed);
 				}
 				if (transform.position.x > max_walk_point.x) {
 					moving = false;
-					move_direction = new Vector3(Random.Range(-1f,0f) * move_speed,move_direction.y);
+					move_direction = new Vector2(Random.Range(-1f,0f) * move_speed,move_direction.y);
 				}
 				if (transform.position.y < min_walk_point.y) {
 					moving = false;
-					move_direction = new Vector3(move_direction.x,Random.Range(0f,1f) * move_speed);
+					move_direction = new Vector2(move_direction.x,Random.Range(0f,1f) * move_speed);
 				}
 				if (transform.position.x < min_walk_point.x) {
 					moving = false;
-					move_direction = new Vector3(Random.Range(0f,1f) * move_speed,move_direction.y);
+					move_direction = new Vector2(Random.Range(0f,1f) * move_speed,move_direction.y);
 				}
 			}
 			//====================
@@ -91,7 +99,7 @@ public class enemy_controller : MonoBehaviour {
 				//setup move counters
 				time_between_move_counter = Random.Range(time_between_move * 0.75f,time_between_move * 1.25f);
 
-				move_direction = Vector3.zero;
+				move_direction = Vector2.zero;
 			}
 		}else{
 			//decrement counter
@@ -107,7 +115,7 @@ public class enemy_controller : MonoBehaviour {
 				time_to_move_counter = Random.Range(time_to_move * 0.75f,time_to_move * 1.25f);
 
 				//create new physics body
-				move_direction = new Vector3(Random.Range(-1f,1f) * move_speed,Random.Range(-1f,1f) * move_speed);
+				move_direction = new Vector2(Random.Range(-1f,1f) * move_speed,Random.Range(-1f,1f) * move_speed);
 
 				//tell animator where to face
 				last_move = new Vector2(move_direction.x,move_direction.y);

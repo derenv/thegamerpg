@@ -23,6 +23,10 @@
 </data>
  </layer>
  <layer name="Objects" width="9" height="10">
+  <properties>
+   <property name="unity:sortingLayerName" value="WorldObjects"/>
+   <property name="unity:sortingOrder" type="int" value="0"/>
+  </properties>
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,

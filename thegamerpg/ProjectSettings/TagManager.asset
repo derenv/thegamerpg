@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - enemy
+  - npc
   layers:
   - Default
   - TransparentFX
@@ -62,4 +63,7 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 4145196591
+    locked: 0
+  - name: UI2
+    uniqueID: 1940837497
     locked: 0

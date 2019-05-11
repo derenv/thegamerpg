@@ -12,7 +12,7 @@ public class bounds : MonoBehaviour {
 	 */
 	void Start () {
 		the_bounds = GetComponent<BoxCollider2D>();
-		the_camera = GetComponent<camera_controller>();
+		the_camera = FindObjectOfType<camera_controller>();
 		if(the_camera != null){
 			the_camera.set_bounds (the_bounds);
 		}

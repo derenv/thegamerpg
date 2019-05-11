@@ -27,6 +27,8 @@ public class player_controller : MonoBehaviour {
 
 	private sfx_manager sfx_man;
 
+	Vector2 pause_velocity;
+
 	/* Start method
 	 * called on initialization
 	 */
@@ -46,6 +48,8 @@ public class player_controller : MonoBehaviour {
 		}
 
 		last_move = new Vector2(0, -1f);
+
+		pause_velocity = Vector2.zero;
 	}
 
 	/* Update method
@@ -55,9 +59,14 @@ public class player_controller : MonoBehaviour {
 		//moving check set
 		moving = false;
 
+		//check if game stopped
 		if(!can_move){
+			pause_velocity = rigid_body.velocity;
 			rigid_body.velocity = Vector2.zero;
 			return;
+		}else if(can_move && pause_velocity != Vector2.zero){
+			rigid_body.velocity = pause_velocity;
+			pause_velocity = Vector2.zero;
 		}
 
 		if(!attacking){

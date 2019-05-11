@@ -25,6 +25,10 @@ public class villager_movement : MonoBehaviour {
 	//dialogue
 	public bool can_move;
 	private dialogue_manager d_manager;
+	//-------------------
+	private Animator anim;
+	public Vector2 last_move;
+	//-------------------
 
 	/* Start method
 	 * called on initialization
@@ -35,6 +39,7 @@ public class villager_movement : MonoBehaviour {
 		can_move = true;
 
 		rigid_body = GetComponent<Rigidbody2D>();
+		anim = GetComponent<Animator>();
 
 		wait_counter = wait_time;
 		walk_counter = walk_time;
@@ -52,9 +57,10 @@ public class villager_movement : MonoBehaviour {
 	 * called once per frame
 	 */
 	void Update(){
-		if(!d_manager.active){
+		/*
+		if(!d_manager.active &&){
 			can_move = true;
-		}
+		}*/
 
 		if(!can_move){
 			rigid_body.velocity = Vector2.zero;
@@ -102,6 +108,8 @@ public class villager_movement : MonoBehaviour {
 
 					break;
 			}
+			
+			last_move = new Vector2(rigid_body.velocity.x,rigid_body.velocity.y);
 
 			if (walk_counter < 0) {
 				walking = false;
@@ -115,6 +123,15 @@ public class villager_movement : MonoBehaviour {
 			if (wait_counter < 0) {
 				choose_direction ();
 			}
+		}
+		
+		//tell animator where to face
+		if (anim != null && anim.isActiveAndEnabled) {
+			anim.SetBool ("moving", walking);
+			anim.SetFloat ("last_move_x", last_move.x);
+			anim.SetFloat ("last_move_y", last_move.y);
+			anim.SetFloat ("move_x", rigid_body.velocity.x);
+			anim.SetFloat ("move_y", rigid_body.velocity.y);
 		}
 	}
 

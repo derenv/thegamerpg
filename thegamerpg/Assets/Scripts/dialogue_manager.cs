@@ -16,14 +16,15 @@ public class dialogue_manager : MonoBehaviour {
 	public List<string[]> dialogues;
 	public int current_array;
 
-	private player_controller the_player;
+	private pause_controller pause;
 
 	/* Start method
 	 * called on initialization
 	 */
 	void Start(){
-		the_player = FindObjectOfType<player_controller>();
+		//the_player = FindObjectOfType<player_controller>();
 		dialogues = new List<string[]>();
+		pause = FindObjectOfType<pause_controller>();
 	}
 	
 	/* Update method
@@ -35,30 +36,35 @@ public class dialogue_manager : MonoBehaviour {
 		}
 
 		if (current_line >= lines.Length) {
-			Debug.Log ("current array:" + current_array + "/" + dialogues.Count);
 			if(dialogues.Count > current_array) {
-				Debug.Log ("more arrays exist..");
 				//set to next list
 				lines = dialogues[current_array];
 
-				//remove old text
-				if (dialogues.Count > 1) {
-					dialogues.RemoveAt (current_array);
-				}
-
-				//set new current 
+				//increment array pointer
 				current_array++;
 			} else {
-				Debug.Log ("deactivating dialogue box..");
+				//deactivate text box
 				d_box.SetActive (false);
 				active = false;
-				the_player.can_move = true;
+				if(!pause.stopped){
+					pause.start_movement();
+				}
+
+				//clear lines fetched current array
+				lines = new string[0];
+
+				//clear all arrays
+				dialogues.Clear();
+				dialogues.TrimExcess();
+
+				//reset array pointer
+				current_array = 0;
 			}
+			//reset line pointer
 			current_line = 0;
 		}
 
 		if(current_line < lines.Length && active){
-			Debug.Log ("setting active dialogue box line to "+current_line+" from array "+current_array);
 			d_text.text = lines[current_line];
 		}
 	}
@@ -66,7 +72,7 @@ public class dialogue_manager : MonoBehaviour {
 	public void show_box(string input){
 		d_box.SetActive(true);
 		active = true;
-		the_player.can_move = false;
+		pause.stop_movement();
 
 		d_text.text = input;
 	}
@@ -74,38 +80,33 @@ public class dialogue_manager : MonoBehaviour {
 	public void show_dialogue(){
 		d_box.SetActive(true);
 		active = true;
-		the_player.can_move = false;
+		pause.stop_movement();
 	}
 
 	public void show_dialogue(string[] text){
 		//prepare
-		Debug.Log("current list:"+current_array);
-		Debug.Log("pre-size:"+dialogues.Count);
 		if(active){
-			Debug.Log("adding array to active array list");
+			//add array to list of current dialogues
 			dialogues.Add(text);
 		}else{
-			Debug.Log("adding array to empty array list");
-			Debug.Log ("old capacity:" + dialogues.Capacity);
+			//reset and add new
+			//clear arrays
 			dialogues.Clear();
 			dialogues.TrimExcess ();
 
+			//add new text
 			dialogues.Add(text);
 
-			Debug.Log("post-size:"+dialogues.Count);
-			Debug.Log("current list:"+current_array);
-			Debug.Log("====");
-			Debug.Log ("current capacity:" + dialogues.Capacity);
+			//reset line & array counters
 			current_array = dialogues.IndexOf(text);
-			Debug.Log("current list:"+current_array);
 			current_line = 0;
 
 			//activate dialogue box
 			d_box.SetActive(true);
 			active = true;
 
-			//restrict player movement
-			the_player.can_move = false;
+			//restrict player/enemy/npc/boss movement
+			pause.stop_movement();
 		}
 	}
 }

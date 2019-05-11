@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class music_controller : MonoBehaviour {
 	//globals
-	private static bool mc_exists;
+	//private static bool mc_exists;
 
 	public AudioSource[] tracks;
 
@@ -16,12 +16,13 @@ public class music_controller : MonoBehaviour {
 	 */
 	void Start () {
 		//avoid duplicates
+		/*
 		if(!mc_exists){
 			mc_exists = true;
 			DontDestroyOnLoad(transform.gameObject);
 		}else{
 			Destroy(gameObject);
-		}
+		}*/
 	}
 	
 	/* Update method

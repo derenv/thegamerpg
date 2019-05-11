@@ -230,10 +230,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c784711faa01d3f41b7e254ef61ccfd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  move_speed: 5
+  move_speed: 1
   moving: 0
   time_between_move: 2
   time_to_move: 1
+  last_move: {x: 0, y: 0}
+  move_direction: {x: 0, y: 0, z: 0}
   reload_wait: 2
   walk_zone: {fileID: 0}
 --- !u!114 &3209354024830392131

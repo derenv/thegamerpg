@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/wizardtower_outside.unity
     guid: 79f010adc8b06c8489f012ef11f5dedb
+  - enabled: 1
+    path: Assets/Scenes/wizardtower_firstfloor.unity
+    guid: 8824d71940bf7c8f99a5062e2b74de90
   m_configObjects: {}

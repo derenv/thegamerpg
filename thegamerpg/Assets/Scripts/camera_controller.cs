@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class camera_controller : MonoBehaviour {
 	//globals
@@ -30,9 +31,17 @@ public class camera_controller : MonoBehaviour {
 			Destroy(gameObject);
 		}
 
+		//set bounds
 		min_bounds = bounds_box.bounds.min;
 		max_bounds = bounds_box.bounds.max;
 
+		/*
+		//bounds alternate
+		//listen for scene change (and new bounds)
+		SceneManager.sceneLoaded += detect_new_bounds;
+		*/
+		
+		//set size
 		the_camera = GetComponent<Camera>();
 		half_height = the_camera.orthographicSize;
 		half_width = half_height * Screen.width / Screen.height;
@@ -58,4 +67,11 @@ public class camera_controller : MonoBehaviour {
 		min_bounds = bounds_box.bounds.min;
 		max_bounds = bounds_box.bounds.max;
 	}
+	
+	/*
+	//bounds alternate
+	void detect_new_bounds(Scene scene, LoadSceneMode mode){
+		//detect and set new bounds
+	}
+	*/
 }

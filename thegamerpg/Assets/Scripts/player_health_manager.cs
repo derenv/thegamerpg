@@ -11,7 +11,7 @@ public class player_health_manager : MonoBehaviour {
 	public float flash_length;
 	private float flash_counter;
 	private SpriteRenderer player_sprite;
-
+	private SpriteRenderer[] children_sprites;
 	private sfx_manager sfx_man;
 
 	/* Start method
@@ -36,14 +36,28 @@ public class player_health_manager : MonoBehaviour {
 		}
 
 		if(flashing){
+			children_sprites = GetComponentsInChildren<SpriteRenderer>();
+			
 			if (flash_counter > flash_length * 0.66f) {
 				player_sprite.color = new Color (player_sprite.color.r, player_sprite.color.g, player_sprite.color.b, 0f);
+				foreach(SpriteRenderer x in children_sprites){
+					x.color = new Color (x.color.r, x.color.g, x.color.b, 0f);
+				}
 			}else if (flash_counter > flash_length * 0.33f) {
 				player_sprite.color = new Color (player_sprite.color.r, player_sprite.color.g, player_sprite.color.b, 1f);
+				foreach(SpriteRenderer x in children_sprites){
+					x.color = new Color (x.color.r, x.color.g, x.color.b, 1f);
+				}
 			}else if (flash_counter > 0) {
 				player_sprite.color = new Color (player_sprite.color.r, player_sprite.color.g, player_sprite.color.b, 0f);
+				foreach(SpriteRenderer x in children_sprites){
+					x.color = new Color (x.color.r, x.color.g, x.color.b, 0f);
+				}
 			}else{
 				player_sprite.color = new Color(player_sprite.color.r,player_sprite.color.g,player_sprite.color.b,1f);
+				foreach(SpriteRenderer x in children_sprites){
+					x.color = new Color (x.color.r, x.color.g, x.color.b, 1f);
+				}
 				flashing = false;
 			}
 			flash_counter -= Time.deltaTime;

@@ -46,30 +46,37 @@ public class quest_trigger : MonoBehaviour {
 		}
 	}*/
 
+
 	void OnTriggerEnter2D(Collider2D other){
 		if(other.gameObject.name == "Player"){
 			if(interact){
 				if(Input.GetKeyUp(KeyCode.Space)){
-					if(end && qm.quests[end_quest_id].gameObject.activeSelf){
-						qm.quests [end_quest_id].end_quest();
+					if(end && !qm.quests_completed[end_quest_id] && qm.quests[end_quest_id].gameObject.activeSelf){
+						//if this is a end quest trigger
+						//if the quest is not completed
+						//if the quest is active
+						qm.quests[end_quest_id].end_quest();
 					}
-					if(start && !qm.quests[start_quest_id].gameObject.activeSelf){
+					if(start && !qm.quests_completed[start_quest_id] && !qm.quests[start_quest_id].gameObject.activeSelf){
+						//if this is a start quest trigger
+						//if the quest is not completed
+						//if the quest is not active
 						qm.quests[start_quest_id].start_quest();
-					}/*
-					if(!qm.quests_completed[quest_id]){
-						/ /if this is a start quest trigger AND the quest is not active
-					}*/
+					}
 				}
 			}else{
-				if(end && qm.quests[end_quest_id].gameObject.activeSelf){
-					qm.quests [end_quest_id].end_quest();
+				if(end && !qm.quests_completed[end_quest_id] && qm.quests[end_quest_id].gameObject.activeSelf){
+					//if this is a end quest trigger
+					//if the quest is not completed
+					//if the quest is active
+					qm.quests[end_quest_id].end_quest();
 				}
-				if(start && !qm.quests[start_quest_id].gameObject.activeSelf){
+				if(start && !qm.quests_completed[start_quest_id] && !qm.quests[start_quest_id].gameObject.activeSelf){
+					//if this is a start quest trigger
+					//if the quest is not completed
+					//if the quest is not active
 					qm.quests[start_quest_id].start_quest();
-				}/*
-				if(!qm.quests_completed[quest_id]){
-					/ /if this is a start quest trigger AND the quest is not active
-				}*/
+				}
 			}
 		}
 	}
