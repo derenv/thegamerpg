@@ -14,6 +14,8 @@ public class player_health_manager : MonoBehaviour {
 	private SpriteRenderer[] children_sprites;
 	private sfx_manager sfx_man;
 
+	private int potions;
+
 	/* Start method
 	 * called on initialization
 	 */
@@ -23,6 +25,8 @@ public class player_health_manager : MonoBehaviour {
 		player_sprite = GetComponent<SpriteRenderer>();
 
 		sfx_man = FindObjectOfType<sfx_manager>();
+
+		potions = 0;
 	}
 
 	/* Update method
@@ -36,27 +40,27 @@ public class player_health_manager : MonoBehaviour {
 		}
 
 		if(flashing){
-			children_sprites = GetComponentsInChildren<SpriteRenderer>();
+			children_sprites = GetComponentsInChildren<SpriteRenderer>(true);
 			
 			if (flash_counter > flash_length * 0.66f) {
-				player_sprite.color = new Color (player_sprite.color.r, player_sprite.color.g, player_sprite.color.b, 0f);
+				player_sprite.enabled = false;
 				foreach(SpriteRenderer x in children_sprites){
-					x.color = new Color (x.color.r, x.color.g, x.color.b, 0f);
+					x.enabled = false;
 				}
 			}else if (flash_counter > flash_length * 0.33f) {
-				player_sprite.color = new Color (player_sprite.color.r, player_sprite.color.g, player_sprite.color.b, 1f);
+				player_sprite.enabled = true;
 				foreach(SpriteRenderer x in children_sprites){
-					x.color = new Color (x.color.r, x.color.g, x.color.b, 1f);
+					x.enabled = true;
 				}
 			}else if (flash_counter > 0) {
-				player_sprite.color = new Color (player_sprite.color.r, player_sprite.color.g, player_sprite.color.b, 0f);
+				player_sprite.enabled = false;
 				foreach(SpriteRenderer x in children_sprites){
-					x.color = new Color (x.color.r, x.color.g, x.color.b, 0f);
+					x.enabled = false;
 				}
 			}else{
-				player_sprite.color = new Color(player_sprite.color.r,player_sprite.color.g,player_sprite.color.b,1f);
+				player_sprite.enabled = true;
 				foreach(SpriteRenderer x in children_sprites){
-					x.color = new Color (x.color.r, x.color.g, x.color.b, 1f);
+					x.enabled = true;
 				}
 				flashing = false;
 			}
@@ -77,9 +81,33 @@ public class player_health_manager : MonoBehaviour {
 	}
 
 	/* 
+	 * increment player health by passed int
+	 */
+	public void heal_player(int restore){
+		player_current_health += restore;
+
+		if(player_current_health > player_max_health){
+			player_current_health = player_max_health;
+		}
+	}
+
+	/* 
 	 * 
 	 */
 	public void set_max_health(){
 		player_current_health = player_max_health;
+	}
+
+
+	public void add_potion(){
+		potions++;
+	}
+	public void use_potion(){
+		heal_player(50);
+		potions--;
+	}
+
+	public int potion_amount(){
+		return potions;
 	}
 }

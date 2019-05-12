@@ -593,7 +593,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ColliderPaths.Array.data[5].m_Collider
       value: 
-      objectReference: {fileID: 602678617}
+      objectReference: {fileID: 0}
     - target: {fileID: 9100927541782619601, guid: 8e9a16afd6da1c34ba81d4eab6e6e54a,
         type: 3}
       propertyPath: m_ColliderPaths.Array.data[5].m_ColliderPaths.Array.data[0].Array.data[0].X
@@ -2132,12 +2132,6 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: -2695619058785784247, guid: 8e9a16afd6da1c34ba81d4eab6e6e54a,
     type: 3}
---- !u!60 &602678617 stripped
-PolygonCollider2D:
-  m_CorrespondingSourceObject: {fileID: -9205729180889147303, guid: 8e9a16afd6da1c34ba81d4eab6e6e54a,
-    type: 3}
-  m_PrefabInstance: {fileID: 602678616}
-  m_PrefabAsset: {fileID: 0}
 --- !u!60 &602678618 stripped
 PolygonCollider2D:
   m_CorrespondingSourceObject: {fileID: 1559232520878926983, guid: 8e9a16afd6da1c34ba81d4eab6e6e54a,
@@ -2421,6 +2415,46 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c61816be95455e5638a3beb215cf193c, type: 3}
+--- !u!1 &1063722107 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2186990975338437681, guid: c61816be95455e5638a3beb215cf193c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1063722106}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1063722108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063722107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017608f9014b20946ae040557238cf68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  end_quest_id: 16
+  start_quest_id: 17
+  interact: 1
+  start: 1
+  end: 1
+--- !u!114 &1063722109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063722107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017608f9014b20946ae040557238cf68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  end_quest_id: 6
+  start_quest_id: 7
+  interact: 1
+  start: 1
+  end: 1
 --- !u!1001 &1210872296
 PrefabInstance:
   m_ObjectHideFlags: 0

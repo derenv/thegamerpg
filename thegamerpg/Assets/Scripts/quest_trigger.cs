@@ -9,7 +9,6 @@ public class quest_trigger : MonoBehaviour {
 	public int start_quest_id;
 
 	public bool interact;
-	public bool contact;
 
 	public bool start;
 	public bool end;
@@ -27,27 +26,8 @@ public class quest_trigger : MonoBehaviour {
 	void Update(){
 		//
 	}
-	/*
+	
 	void OnTriggerStay2D(Collider2D other){
-		if(other.gameObject.name == "Player"){
-			if(Input.GetKeyUp(KeyCode.Space)){
-				print(Input.inputString);
-				contact = true;
-				if(!qm.quests_completed[quest_id] && interact){
-					//if this is a start quest trigger AND the quest is not active
-					if(start && !qm.quests[quest_id].gameObject.activeSelf){
-						qm.quests[quest_id].start_quest();
-					}
-					if(end && qm.quests[quest_id].gameObject.activeSelf){
-						qm.quests[quest_id].end_quest();
-					}
-				}
-			}
-		}
-	}*/
-
-
-	void OnTriggerEnter2D(Collider2D other){
 		if(other.gameObject.name == "Player"){
 			if(interact){
 				if(Input.GetKeyUp(KeyCode.Space)){
@@ -56,8 +36,16 @@ public class quest_trigger : MonoBehaviour {
 						//if the quest is not completed
 						//if the quest is active
 						qm.quests[end_quest_id].end_quest();
+
+						//activate any loot areas
+						loot_area[] areas = GetComponentsInChildren<loot_area>(true);
+						foreach(loot_area x in areas){
+							if(x.quest_required == end_quest_id){
+								x.gameObject.SetActive(true);
+							}
+						}
 					}
-					if(start && !qm.quests_completed[start_quest_id] && !qm.quests[start_quest_id].gameObject.activeSelf){
+					if(start && !qm.quests_completed[start_quest_id] && !qm.quests[start_quest_id].gameObject.activeSelf && ((end && qm.quests_completed[end_quest_id]) || !end)){
 						//if this is a start quest trigger
 						//if the quest is not completed
 						//if the quest is not active
@@ -70,6 +58,14 @@ public class quest_trigger : MonoBehaviour {
 					//if the quest is not completed
 					//if the quest is active
 					qm.quests[end_quest_id].end_quest();
+
+					//activate any loot areas
+					loot_area[] areas = GetComponentsInChildren<loot_area>(true);
+					foreach(loot_area x in areas){
+						if(x.quest_required == end_quest_id){
+							x.gameObject.SetActive(true);
+						}
+					}
 				}
 				if(start && !qm.quests_completed[start_quest_id] && !qm.quests[start_quest_id].gameObject.activeSelf){
 					//if this is a start quest trigger

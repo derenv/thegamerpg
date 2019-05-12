@@ -4,8 +4,9 @@
  <tileset firstgid="145" source="../Tilesets/Stonework3.tsx"/>
  <tileset firstgid="209" source="../Tilesets/furniture.tsx"/>
  <tileset firstgid="245" source="../Tilesets/indoor_floors.tsx"/>
- <tileset firstgid="257" source="../Tilesets/miscobjects.tsx"/>
- <tileset firstgid="289" source="../Tilesets/Trees.tsx"/>
+ <tileset firstgid="260" source="../Tilesets/miscobjects.tsx"/>
+ <tileset firstgid="300" source="../Tilesets/Trees.tsx"/>
+ <tileset firstgid="315" source="../Tilesets/Campfire.tsx"/>
  <layer name="Ground" width="8" height="14">
   <data encoding="csv">
 0,254,254,254,254,254,254,0,
@@ -43,7 +44,7 @@
 0,0,215,0,0,220,0,0,
 0,168,0,0,210,226,165,0,
 0,0,0,0,0,229,0,0,
-0,0,0,0,0,257,0,0
+0,0,0,0,0,0,0,0
 </data>
  </layer>
  <layer name="Walls" width="8" height="14">
@@ -67,16 +68,16 @@
  <layer name="Wall Objects" width="8" height="14">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,
-0,0,218,217,237,0,0,0,
-0,0,0,221,230,221,0,0,
+0,0,318,217,335,0,0,0,
+0,0,0,221,330,221,0,0,
 0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,
-0,0,219,0,0,0,0,0,
+0,0,321,0,0,0,0,0,
 0,0,0,0,0,0,0,0,
 0,0,0,0,0,223,0,0,
 0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,
+0,0,0,0,0,324,0,0,
 0,0,222,0,0,0,0,0,
 0,0,222,0,0,0,0,0,
 0,0,0,0,0,0,0,0

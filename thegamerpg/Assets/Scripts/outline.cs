@@ -5,29 +5,86 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
 
-public class outline : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler{
-	//globals
-    private Text text;
-
-    /* Start method
-	 * called on initialization
-	 */
-    void Start(){
-        text = GetComponent<Text>();
-        text.color = Color.black;
+public class outline : MonoBehaviour, IPointerClickHandler, IPointerExitHandler, IPointerEnterHandler{
+    public void OnPointerClick(PointerEventData eventData){
+        //check which button clicked
+        if(eventData.pointerCurrentRaycast.gameObject.name.Equals("New Game")){
+            //
+            Debug.Log("new game..");
+        }else if(eventData.pointerCurrentRaycast.gameObject.name.Equals("Save Game")){
+            //
+            Debug.Log("saving game..");
+        }else if(eventData.pointerCurrentRaycast.gameObject.name.Equals("Load Game")){
+            //
+            Debug.Log("loading game..");
+        }else if(eventData.pointerCurrentRaycast.gameObject.name.Equals("Settings")){
+            //
+            Debug.Log("opening settings..");
+        }else if(eventData.pointerCurrentRaycast.gameObject.name.Equals("Exit")){
+            Debug.Log("..Quitting..");
+            Application.Quit();
+        }
     }
 
-    /* 
-     * Called when the mouse enters the GUIElement or Collider.
-	 */
     public void OnPointerEnter(PointerEventData eventData){
-        text.color = Color.red;
+        //outline visible
+        Debug.Log("Mouse Enter");
     }
 
-    /* 
-     * Called when the mouse leaves the GUIElement or Collider.
-	 */
     public void OnPointerExit(PointerEventData eventData){
-        text.color = Color.black;
+        //outline gone
+        Debug.Log("Mouse Exit");
     }
+/* 
+    //===============
+    private save CreateSaveGameObject(){
+        save save = new save();
+
+        //scene
+        //
+
+        //enemies
+        //
+
+        //stats
+        //
+
+        //equipment
+        //
+
+        //quests
+        //
+
+        return save;
+    }
+    public void SaveGame(){
+        //create object
+        save save = CreateSaveGameObject();
+        
+        //convert to binary object and write to file
+        BinaryFormatter bf = new BinaryFormatter();
+        FileStream file = File.Create(Application.persistentDataPath + "/gamesave.save");
+        bf.Serialize(file, save);
+        file.Close();
+        
+        Debug.Log("Game Saved");
+    }
+    public void LoadGame(){
+        //if save exists
+        if (File.Exists(Application.persistentDataPath + "/gamesave.save")){
+
+            //fetch binary file and deserialize
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream file = File.Open(Application.persistentDataPath + "/gamesave.save", FileMode.Open);
+            save save = (save)bf.Deserialize(file);
+            file.Close();
+
+            //use data
+            //
+
+            Debug.Log("Game Loaded");
+        }else{
+            Debug.Log("No game saved!");
+        }
+    }*/
 }

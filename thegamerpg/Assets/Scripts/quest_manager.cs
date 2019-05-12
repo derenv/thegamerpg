@@ -26,12 +26,6 @@ public class quest_manager : MonoBehaviour {
 	}
 
 	public void show_quest_dialogue(string[] quest_text){
-		//prepare
-		//dm.lines = quest_text;
-		//dm.current_line = -1;
-
-		//use
-		//dm.show_dialogue();
 		dm.show_dialogue(quest_text);
 	}
 }

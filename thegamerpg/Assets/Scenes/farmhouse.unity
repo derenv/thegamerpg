@@ -149,7 +149,7 @@ Transform:
   m_Children:
   - {fileID: 1804373477}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &64771795 stripped
 PolygonCollider2D:
@@ -214,12 +214,6 @@ PolygonCollider2D:
 --- !u!60 &612781692 stripped
 PolygonCollider2D:
   m_CorrespondingSourceObject: {fileID: 8641823935178741101, guid: 716a82ba89619f04db45417df071a14f,
-    type: 3}
-  m_PrefabInstance: {fileID: 1262470784}
-  m_PrefabAsset: {fileID: 0}
---- !u!60 &636963719 stripped
-PolygonCollider2D:
-  m_CorrespondingSourceObject: {fileID: -554708471239166008, guid: 716a82ba89619f04db45417df071a14f,
     type: 3}
   m_PrefabInstance: {fileID: 1262470784}
   m_PrefabAsset: {fileID: 0}
@@ -383,7 +377,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 949324440414390215, guid: b71e9c6dbc3178c7c9a91488add3a5d0, type: 3}
+    - {fileID: 5219449866045557264, guid: b71e9c6dbc3178c7c9a91488add3a5d0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b71e9c6dbc3178c7c9a91488add3a5d0, type: 3}
 --- !u!4 &1022309102 stripped
 Transform:
@@ -391,6 +387,64 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1022309101}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1022309103 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5219449866045557265, guid: b71e9c6dbc3178c7c9a91488add3a5d0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1022309101}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1022309104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022309103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab2117ffd0dca8140842b57a14e4381d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+  - 'Need some reminders? sure:'
+  - To attack, press the 'J' key.
+  - To block, press the 'B' key. You will need a shield for this!
+  - To heal, press the 'H' key. You will need at least one potion for this!
+  - To become more powerful, you must gain experience by defeating enemies.
+--- !u!114 &1022309105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022309103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017608f9014b20946ae040557238cf68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  end_quest_id: 4
+  start_quest_id: 5
+  interact: 1
+  start: 1
+  end: 1
+--- !u!114 &1022309106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022309103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017608f9014b20946ae040557238cf68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  end_quest_id: 2
+  start_quest_id: 3
+  interact: 1
+  start: 1
+  end: 1
 --- !u!1 &1076778325
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,7 +474,7 @@ Transform:
   m_Children:
   - {fileID: 934966646}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1262470784
 PrefabInstance:
@@ -1348,7 +1402,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ColliderPaths.Array.data[13].m_Collider
       value: 
-      objectReference: {fileID: 636963719}
+      objectReference: {fileID: 0}
     - target: {fileID: -8590164961995744040, guid: 716a82ba89619f04db45417df071a14f,
         type: 3}
       propertyPath: m_ColliderPaths.Array.data[13].m_ColliderPaths.Array.data[0].Array.data[0].X
@@ -2113,21 +2167,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 61344995446769632, guid: 964a8ef251bff7340af64c97beb2ca95,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 61344995446769632, guid: 964a8ef251bff7340af64c97beb2ca95,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 61344995446769632, guid: 964a8ef251bff7340af64c97beb2ca95,
-        type: 3}
-      propertyPath: m_EdgeRadius
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4018326184238368, guid: 964a8ef251bff7340af64c97beb2ca95, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2168,6 +2207,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 61344995446769632, guid: 964a8ef251bff7340af64c97beb2ca95,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61344995446769632, guid: 964a8ef251bff7340af64c97beb2ca95,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61344995446769632, guid: 964a8ef251bff7340af64c97beb2ca95,
+        type: 3}
+      propertyPath: m_EdgeRadius
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 964a8ef251bff7340af64c97beb2ca95, type: 3}
 --- !u!1 &1361929472 stripped
@@ -2195,8 +2249,6 @@ MonoBehaviour:
   - To Heal yourself, press 'H'. You will need a Healing Potion to do this!
   - To level up (which gains you more Health and greater Damage), you must gain experience
     by defeating enemies and completing quests.
-  - Fetch me the items in the chest in the Abandoned Farm way to the North.
-  - Oh, and there'll be some items you can have in there too.
 --- !u!60 &1447284950 stripped
 PolygonCollider2D:
   m_CorrespondingSourceObject: {fileID: 5156896175496360924, guid: 716a82ba89619f04db45417df071a14f,
@@ -2290,66 +2342,6 @@ PolygonCollider2D:
     type: 3}
   m_PrefabInstance: {fileID: 1262470784}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &2024153296
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1516839096725178, guid: aff7e1db2fd0f1f458672e2452144567, type: 3}
-      propertyPath: m_Name
-      value: quest_trigger - farmsearchend
-      objectReference: {fileID: 0}
-    - target: {fileID: 4467433097034588, guid: aff7e1db2fd0f1f458672e2452144567, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.96961474
-      objectReference: {fileID: 0}
-    - target: {fileID: 4467433097034588, guid: aff7e1db2fd0f1f458672e2452144567, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.115199745
-      objectReference: {fileID: 0}
-    - target: {fileID: 4467433097034588, guid: aff7e1db2fd0f1f458672e2452144567, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4467433097034588, guid: aff7e1db2fd0f1f458672e2452144567, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4467433097034588, guid: aff7e1db2fd0f1f458672e2452144567, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4467433097034588, guid: aff7e1db2fd0f1f458672e2452144567, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4467433097034588, guid: aff7e1db2fd0f1f458672e2452144567, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4467433097034588, guid: aff7e1db2fd0f1f458672e2452144567, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114309637935193628, guid: aff7e1db2fd0f1f458672e2452144567,
-        type: 3}
-      propertyPath: quest_id
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114309637935193628, guid: aff7e1db2fd0f1f458672e2452144567,
-        type: 3}
-      propertyPath: end
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114309637935193628, guid: aff7e1db2fd0f1f458672e2452144567,
-        type: 3}
-      propertyPath: start
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: aff7e1db2fd0f1f458672e2452144567, type: 3}
 --- !u!60 &2143494195 stripped
 PolygonCollider2D:
   m_CorrespondingSourceObject: {fileID: 4954182811867218465, guid: 716a82ba89619f04db45417df071a14f,

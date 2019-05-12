@@ -15,6 +15,7 @@ public class player_stats : MonoBehaviour {
 	public int current_attack;
 	public int current_defence;
 	private player_health_manager player_health;
+	public int gold;
 
 	/* Start method
 	 * called on initialization
@@ -23,6 +24,7 @@ public class player_stats : MonoBehaviour {
 		current_hp = hp_levels [1];
 		current_attack = attack_levels [1];
 		current_defence = defence_levels [1];
+		gold = 0;
 
 		player_health = FindObjectOfType<player_health_manager>();
 	}
@@ -42,6 +44,14 @@ public class player_stats : MonoBehaviour {
 	public void add_xp(int xp_to_add){
 		current_xp += xp_to_add;
 	}
+
+	/* 
+	 * 
+	 */
+	public void add_gold(int gold_to_add){
+		gold += gold_to_add;
+	}
+
 	/* 
 	 * 
 	 */

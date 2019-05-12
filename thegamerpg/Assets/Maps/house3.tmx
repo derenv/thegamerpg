@@ -2,8 +2,9 @@
 <map version="1.0" tiledversion="1.1.6" orientation="orthogonal" renderorder="left-down" width="9" height="9" tilewidth="32" tileheight="32" infinite="0" nextobjectid="5">
  <tileset firstgid="1" source="../Tilesets/Stonework3.tsx"/>
  <tileset firstgid="65" source="../Tilesets/indoor_floors.tsx"/>
- <tileset firstgid="77" source="../Tilesets/furniture.tsx"/>
- <tileset firstgid="113" source="../Tilesets/miscobjects.tsx"/>
+ <tileset firstgid="80" source="../Tilesets/furniture.tsx"/>
+ <tileset firstgid="116" source="../Tilesets/miscobjects.tsx"/>
+ <tileset firstgid="152" source="../Tilesets/Campfire.tsx"/>
  <layer name="Ground" width="9" height="9">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,
@@ -27,10 +28,10 @@
 0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,
-0,0,83,0,0,0,94,0,0,
-0,24,116,0,92,92,97,21,0,
-0,0,116,0,0,0,0,0,0,
-0,0,116,0,0,0,0,0,0,
+0,0,86,0,0,0,97,0,0,
+0,24,119,0,95,95,100,21,0,
+0,0,119,0,0,0,0,0,0,
+0,0,119,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0
 </data>
  </layer>
@@ -51,8 +52,8 @@
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,
-0,0,86,105,85,105,86,0,0,
-0,0,0,98,89,98,0,0,0,
+0,0,155,172,88,172,155,0,0,
+0,0,0,168,92,167,0,0,0,
 0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,

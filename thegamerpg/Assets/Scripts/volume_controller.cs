@@ -8,6 +8,7 @@ public class volume_controller : MonoBehaviour {
 
 	private float audio_level;
 	public float default_audio;
+	public string type;
 
 	/* Start method
 	 * called on initialization
