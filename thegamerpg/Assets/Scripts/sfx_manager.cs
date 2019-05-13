@@ -8,21 +8,4 @@ public class sfx_manager : MonoBehaviour {
 	public AudioSource player_dead;
 	public AudioSource player_attack;
 	public AudioSource player_heal;
-	public AudioSource player_block;
-
-	//private static bool sfx_manager_exists;
-
-	/* Start method
-	 * called on initialization
-	 */
-	void Start(){
-		//avoid duplicates
-		/*
-		if(!sfx_manager_exists){
-			sfx_manager_exists = true;
-			DontDestroyOnLoad(transform.gameObject);
-		}else{
-			Destroy(gameObject);
-		}*/
-	}
 }

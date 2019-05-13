@@ -4,23 +4,26 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class outline : MonoBehaviour, IPointerClickHandler, IPointerExitHandler, IPointerEnterHandler{
     public void OnPointerClick(PointerEventData eventData){
         //check which button clicked
         if(eventData.pointerCurrentRaycast.gameObject.name.Equals("New Game")){
-            //
+            //MAIN
             Debug.Log("new game..");
+            SceneManager.LoadScene("forest1");
         }else if(eventData.pointerCurrentRaycast.gameObject.name.Equals("Save Game")){
-            //
+            //ESC
             Debug.Log("saving game..");
         }else if(eventData.pointerCurrentRaycast.gameObject.name.Equals("Load Game")){
-            //
+            //MAIN+ESC
             Debug.Log("loading game..");
         }else if(eventData.pointerCurrentRaycast.gameObject.name.Equals("Settings")){
-            //
+            //MAIN+ESC
             Debug.Log("opening settings..");
         }else if(eventData.pointerCurrentRaycast.gameObject.name.Equals("Exit")){
+            //MAIN+ESC
             Debug.Log("..Quitting..");
             Application.Quit();
         }

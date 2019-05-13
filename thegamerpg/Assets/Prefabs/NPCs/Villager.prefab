@@ -2949,6 +2949,7 @@ GameObject:
   - component: {fileID: 5219449866045557267}
   - component: {fileID: 5219449866045557264}
   - component: {fileID: 949324440414390215}
+  - component: {fileID: 7918450239148934881}
   m_Layer: 0
   m_Name: Villager
   m_TagString: npc
@@ -3112,6 +3113,20 @@ MonoBehaviour:
   walk_zone: {fileID: 0}
   can_move: 0
   last_move: {x: 0, y: 0}
+--- !u!114 &7918450239148934881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5219449866045557265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab2117ffd0dca8140842b57a14e4381d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+  - Hello there, welcome to our village..
 --- !u!1 &5219449866115993796
 GameObject:
   m_ObjectHideFlags: 0

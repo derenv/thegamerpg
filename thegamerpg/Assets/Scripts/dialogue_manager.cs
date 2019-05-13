@@ -83,6 +83,11 @@ public class dialogue_manager : MonoBehaviour {
 		pause.stop_movement();
 	}
 
+	public bool contains(string[] dialogue){
+		bool x = dialogues.Contains(dialogue);
+		return x;
+	}
+
 	public void show_dialogue(string[] text){
 		//prepare
 		if(active){

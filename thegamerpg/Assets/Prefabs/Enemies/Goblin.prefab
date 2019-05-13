@@ -230,15 +230,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c784711faa01d3f41b7e254ef61ccfd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  move_speed: 4
+  move_speed: 5
   moving: 0
   time_between_move: 2
   time_to_move: 1
   last_move: {x: 0, y: 0}
   move_direction: {x: 0, y: 0}
-  reload_wait: 2
   walk_zone: {fileID: 0}
   can_move: 0
+  attacking: 0
+  attack_time: 0
 --- !u!114 &114743180801801670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,7 +254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max_health: 10
   current_health: 0
-  xp: 15
+  xp: 5
   qm: {fileID: 0}
   enemy_name: goblin
 --- !u!95 &95465593761698966

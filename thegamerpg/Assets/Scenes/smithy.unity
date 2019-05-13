@@ -120,6 +120,95 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &91393286
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4612293663853169311, guid: 5b2ced72f5b461ce898a1847bb0d9bd0,
+        type: 3}
+      propertyPath: m_Name
+      value: loot_area_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612293663853169308, guid: 5b2ced72f5b461ce898a1847bb0d9bd0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.626934
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612293663853169308, guid: 5b2ced72f5b461ce898a1847bb0d9bd0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.8300834
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612293663853169308, guid: 5b2ced72f5b461ce898a1847bb0d9bd0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.6771146
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612293663853169308, guid: 5b2ced72f5b461ce898a1847bb0d9bd0,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612293663853169308, guid: 5b2ced72f5b461ce898a1847bb0d9bd0,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612293663853169308, guid: 5b2ced72f5b461ce898a1847bb0d9bd0,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612293663853169308, guid: 5b2ced72f5b461ce898a1847bb0d9bd0,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612293663853169308, guid: 5b2ced72f5b461ce898a1847bb0d9bd0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612293663853169308, guid: 5b2ced72f5b461ce898a1847bb0d9bd0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612293663853169308, guid: 5b2ced72f5b461ce898a1847bb0d9bd0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612293663853169308, guid: 5b2ced72f5b461ce898a1847bb0d9bd0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612293663853169309, guid: 5b2ced72f5b461ce898a1847bb0d9bd0,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.22950208
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612293663853169309, guid: 5b2ced72f5b461ce898a1847bb0d9bd0,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 5.376257
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612293663853169378, guid: 5b2ced72f5b461ce898a1847bb0d9bd0,
+        type: 3}
+      propertyPath: quest_required
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612293663853169378, guid: 5b2ced72f5b461ce898a1847bb0d9bd0,
+        type: 3}
+      propertyPath: drop_number
+      value: 14
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5b2ced72f5b461ce898a1847bb0d9bd0, type: 3}
 --- !u!1 &319291701
 GameObject:
   m_ObjectHideFlags: 0
@@ -1253,8 +1342,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3789272998137207232, guid: b1a062c73666f9e74aef3efc6c68ac47, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b1a062c73666f9e74aef3efc6c68ac47, type: 3}
+--- !u!1 &1755018968 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3789272998137207233, guid: b1a062c73666f9e74aef3efc6c68ac47,
+    type: 3}
+  m_PrefabInstance: {fileID: 1755018967}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1755018969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755018968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab2117ffd0dca8140842b57a14e4381d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+  - All of my ore was stolen by the orcs, I've had to close the smithy.
+--- !u!114 &1755018970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755018968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017608f9014b20946ae040557238cf68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  end_quest_id: 31
+  start_quest_id: 30
+  interact: 1
+  start: 1
+  end: 1
 --- !u!1001 &1839204998
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1340,5 +1467,5 @@ Transform:
   m_Children:
   - {fileID: 323898892}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

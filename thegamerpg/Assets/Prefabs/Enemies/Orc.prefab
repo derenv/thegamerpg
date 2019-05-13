@@ -200,9 +200,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b77afc29f4196e499b7dd8b8b003e17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  max_health: 20
+  max_health: 50
   current_health: 0
-  xp: 25
+  xp: 40
   qm: {fileID: 0}
   enemy_name: orc
 --- !u!114 &114128426879170454
@@ -223,9 +223,10 @@ MonoBehaviour:
   time_to_move: 1
   last_move: {x: 0, y: 0}
   move_direction: {x: 0, y: 0}
-  reload_wait: 2
   walk_zone: {fileID: 0}
   can_move: 0
+  attacking: 0
+  attack_time: 0
 --- !u!1 &1395498164953208
 GameObject:
   m_ObjectHideFlags: 0

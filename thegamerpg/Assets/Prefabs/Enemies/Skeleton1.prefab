@@ -318,9 +318,10 @@ MonoBehaviour:
   time_to_move: 1
   last_move: {x: 0, y: 0}
   move_direction: {x: 0, y: 0}
-  reload_wait: 2
   walk_zone: {fileID: 0}
   can_move: 0
+  attacking: 0
+  attack_time: 0
 --- !u!114 &3209354024830392131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,7 +334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b77afc29f4196e499b7dd8b8b003e17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  max_health: 15
+  max_health: 25
   current_health: 0
   xp: 20
   qm: {fileID: 0}

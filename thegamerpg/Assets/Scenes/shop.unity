@@ -187,8 +187,49 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 92763191850613620, guid: 1ce7b8ab374d5ce32ae35db5ef5b4004,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -1.1771789
+      objectReference: {fileID: 0}
+    - target: {fileID: 92763191850613620, guid: 1ce7b8ab374d5ce32ae35db5ef5b4004,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 3.3543577
+      objectReference: {fileID: 0}
+    - target: {fileID: 92763191850613620, guid: 1ce7b8ab374d5ce32ae35db5ef5b4004,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.672673
+      objectReference: {fileID: 0}
+    - target: {fileID: 92763191850613620, guid: 1ce7b8ab374d5ce32ae35db5ef5b4004,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 6.1661296
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 92763191850613623, guid: 1ce7b8ab374d5ce32ae35db5ef5b4004, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1ce7b8ab374d5ce32ae35db5ef5b4004, type: 3}
+--- !u!1 &233316766 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 92763191850613622, guid: 1ce7b8ab374d5ce32ae35db5ef5b4004,
+    type: 3}
+  m_PrefabInstance: {fileID: 233316765}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &233316767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233316766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab2117ffd0dca8140842b57a14e4381d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+  - Im sorry, orcs have stolen most of my supplies so I've had to close the store!
 --- !u!1001 &256619362
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1011,7 +1052,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ColliderPaths.Array.data[7].m_Collider
       value: 
-      objectReference: {fileID: 446341492}
+      objectReference: {fileID: 0}
     - target: {fileID: -2700913704196417681, guid: 13e8820e55d17264d9a6135b7eb339f9,
         type: 3}
       propertyPath: m_ColliderPaths.Array.data[7].m_ColliderPaths.Array.data[0].Array.data[0].X
@@ -1258,12 +1299,6 @@ PolygonCollider2D:
 --- !u!60 &446341491 stripped
 PolygonCollider2D:
   m_CorrespondingSourceObject: {fileID: 150998969466417400, guid: 13e8820e55d17264d9a6135b7eb339f9,
-    type: 3}
-  m_PrefabInstance: {fileID: 446341485}
-  m_PrefabAsset: {fileID: 0}
---- !u!60 &446341492 stripped
-PolygonCollider2D:
-  m_CorrespondingSourceObject: {fileID: -3707994810326579642, guid: 13e8820e55d17264d9a6135b7eb339f9,
     type: 3}
   m_PrefabInstance: {fileID: 446341485}
   m_PrefabAsset: {fileID: 0}

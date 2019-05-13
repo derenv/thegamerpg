@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class player_health_manager : MonoBehaviour {
 	//globals
@@ -15,6 +16,9 @@ public class player_health_manager : MonoBehaviour {
 	private sfx_manager sfx_man;
 
 	private int potions;
+	private bool reloading;
+	private float current_reload_wait;
+	public float reload_wait;
 
 	/* Start method
 	 * called on initialization
@@ -36,7 +40,25 @@ public class player_health_manager : MonoBehaviour {
 		if(player_current_health <= 0){
 			sfx_man.player_dead.Play();
 
-			gameObject.SetActive(false);
+			//find spawn point
+			respawn spawn_point = FindObjectOfType<respawn>();
+
+			//
+			reloading = true;
+			current_reload_wait = reload_wait;
+			//gameObject.SetActive(false);
+
+			//move to spawn point
+			transform.position = spawn_point.transform.position;
+			player_current_health = player_max_health / 2;
+		}
+		if (reloading) {
+			current_reload_wait -= Time.deltaTime;
+			if (current_reload_wait < 0){
+				//reload scene and reactivate player
+				//SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+				//gameObject.SetActive(true);
+			}
 		}
 
 		if(flashing){

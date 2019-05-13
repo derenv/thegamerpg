@@ -17,13 +17,6 @@ public class hurt_player : MonoBehaviour {
 		the_player_stats = FindObjectOfType<player_stats>();
 	}
 
-	/* Update method
-	 * called once per frame
-	 */
-	void Update(){
-		//
-	}
-
 	/* 
 	 * called when 2D collision occurs
 	 * initiates combat when colliding object is player

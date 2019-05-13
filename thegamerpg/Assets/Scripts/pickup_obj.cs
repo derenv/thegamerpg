@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class pickup_obj : MonoBehaviour{
     public void pickup_item(player_controller the_player){
+        if(GetComponent<key>() != null){
+            the_player.keys[GetComponent<key>().key_num]=true;
+            return;
+        }
         //add health potion
         if(gameObject.name.Equals("health_potion")){
             the_player.phm.add_potion();

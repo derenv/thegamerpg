@@ -36,9 +36,13 @@ public class player_controller : MonoBehaviour {
 	private sfx_manager sfx_man;
 
 	private Vector2 pause_velocity;
+	public player_health_manager phm;
+	private player_stats stats;
+	public int block_modifier;
+
 
 	public bool[] drops;
-	public player_health_manager phm;
+	public bool[] keys;
 
 	/* Start method
 	 * called on initialization
@@ -48,6 +52,7 @@ public class player_controller : MonoBehaviour {
 		rigid_body = GetComponent<Rigidbody2D>();
 		sfx_man = FindObjectOfType<sfx_manager>();
 		phm = GetComponent<player_health_manager>();
+		stats = FindObjectOfType<player_stats>();
 
 		can_move = true;
 
@@ -126,6 +131,11 @@ public class player_controller : MonoBehaviour {
 					anim.SetBool("block", blocking);
 
 					//no sfx here, occurs when hit from enemy occurs
+					if(stats.current_defence == 0){
+						stats.current_defence = block_modifier;
+					}else{
+						stats.current_defence = stats.current_defence * block_modifier;
+					}
 				}
 			}
 			if(Input.GetKeyDown (KeyCode.H)){
@@ -162,6 +172,7 @@ public class player_controller : MonoBehaviour {
 		} else if (block_time_counter <= 0){
 			blocking = false;
 			anim.SetBool("block", blocking);
+			stats.current_defence = stats.current_defence / block_modifier;
 		}
 		//decrement counter or end heal
 		if (heal_time_counter > 0) {

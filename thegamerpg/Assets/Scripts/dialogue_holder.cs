@@ -24,15 +24,12 @@ public class dialogue_holder : MonoBehaviour {
 	void OnTriggerStay2D(Collider2D other){
 		if(other.gameObject.name == "Player"){
 			if(Input.GetKeyUp(KeyCode.Space)){
-				if(!dm.active){
-					dm.lines = dialogue;
-					dm.current_line = -1;
-					dm.show_dialogue();
+				if(!dm.contains(dialogue)){
+					dm.show_dialogue(dialogue);
 				}
-
-				if(transform.parent.GetComponent<villager_movement>() != null){
-					transform.parent.GetComponent<villager_movement>().can_move = false;
-				}
+			}else{
+				//show spacebar prompt
+				//
 			}
 		}
 	}

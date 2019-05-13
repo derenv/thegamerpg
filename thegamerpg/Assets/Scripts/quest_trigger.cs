@@ -20,13 +20,6 @@ public class quest_trigger : MonoBehaviour {
 		qm = FindObjectOfType<quest_manager>();
 	}
 	
-	/* Update method
-	 * called once per frame
-	 */
-	void Update(){
-		//
-	}
-	
 	void OnTriggerStay2D(Collider2D other){
 		if(other.gameObject.name == "Player"){
 			if(interact){
@@ -51,6 +44,9 @@ public class quest_trigger : MonoBehaviour {
 						//if the quest is not active
 						qm.quests[start_quest_id].start_quest();
 					}
+				}else{
+					//show spacebar prompt
+					//
 				}
 			}else{
 				if(end && !qm.quests_completed[end_quest_id] && qm.quests[end_quest_id].gameObject.activeSelf){
