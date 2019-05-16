@@ -16,9 +16,6 @@ public class player_health_manager : MonoBehaviour {
 	private sfx_manager sfx_man;
 
 	private int potions;
-	private bool reloading;
-	private float current_reload_wait;
-	public float reload_wait;
 
 	/* Start method
 	 * called on initialization
@@ -43,22 +40,9 @@ public class player_health_manager : MonoBehaviour {
 			//find spawn point
 			respawn spawn_point = FindObjectOfType<respawn>();
 
-			//
-			reloading = true;
-			current_reload_wait = reload_wait;
-			//gameObject.SetActive(false);
-
 			//move to spawn point
 			transform.position = spawn_point.transform.position;
 			player_current_health = player_max_health / 2;
-		}
-		if (reloading) {
-			current_reload_wait -= Time.deltaTime;
-			if (current_reload_wait < 0){
-				//reload scene and reactivate player
-				//SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-				//gameObject.SetActive(true);
-			}
 		}
 
 		if(flashing){
@@ -121,8 +105,8 @@ public class player_health_manager : MonoBehaviour {
 	}
 
 
-	public void add_potion(){
-		potions++;
+	public void add_potion(int amount){
+		potions += amount;
 	}
 	public void use_potion(){
 		heal_player(50);

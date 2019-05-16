@@ -39,6 +39,8 @@ public class quest_item : MonoBehaviour {
 
 				gameObject.SetActive(false);
 			}
+		}else if(qm.quests_completed[quest_id] && (!start || (start && (qm.quests_completed[start_quest_id] || qm.quests[start_quest_id].gameObject.activeSelf)))){
+			gameObject.SetActive(false);
 		}
 	}
 
@@ -46,17 +48,6 @@ public class quest_item : MonoBehaviour {
 		if(other.gameObject.name == "Player"){
 			if(!qm.quests_completed[quest_id] && qm.quests[quest_id].gameObject.activeSelf){
 				qm.item_collected = item_name;
-
-				//activate any loot areas
-				loot_area[] areas = GetComponentsInChildren<loot_area>(true);
-				foreach(loot_area x in areas){
-					if(x.quest_required == quest_id){
-						x.gameObject.SetActive(true);
-					}
-				}
-
-				//allow loot box to show
-				gameObject.transform.DetachChildren();
 				
 				//for end/start quest ordering in dialogue queue
 				ended = true;

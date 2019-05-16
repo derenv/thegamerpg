@@ -89,6 +89,11 @@ public class dialogue_manager : MonoBehaviour {
 	}
 
 	public void show_dialogue(string[] text){
+		//catch empty text
+		if(text.Length < 1){
+			return;
+		}
+		
 		//prepare
 		if(active){
 			//add array to list of current dialogues

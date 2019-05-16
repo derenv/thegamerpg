@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class player_controller : MonoBehaviour {
 	//globals
@@ -22,8 +23,6 @@ public class player_controller : MonoBehaviour {
 	private float attack_time_counter;
 
 	private bool blocking;
-	public float block_time;
-	private float block_time_counter;
 
 	private bool healing;
 	public float heal_time;
@@ -36,13 +35,17 @@ public class player_controller : MonoBehaviour {
 	private sfx_manager sfx_man;
 
 	private Vector2 pause_velocity;
-	public player_health_manager phm;
+	private player_health_manager phm;
 	private player_stats stats;
 	public int block_modifier;
 
-
+	//loot areas & keys
 	public bool[] drops;
 	public bool[] keys;
+
+	//test
+	private bool found;
+	//====
 
 	/* Start method
 	 * called on initialization
@@ -52,7 +55,6 @@ public class player_controller : MonoBehaviour {
 		rigid_body = GetComponent<Rigidbody2D>();
 		sfx_man = FindObjectOfType<sfx_manager>();
 		phm = GetComponent<player_health_manager>();
-		stats = FindObjectOfType<player_stats>();
 
 		can_move = true;
 
@@ -64,15 +66,26 @@ public class player_controller : MonoBehaviour {
 			Destroy(gameObject);
 		}
 
-		last_move = new Vector2(0, -1f);
-
 		pause_velocity = Vector2.zero;
+	}
+
+	public void reset(){
+		exists = false;
+		Destroy(gameObject);
 	}
 
 	/* Update method
 	 * called once per frame
 	 */
 	void Update(){
+		//cleanup
+		if(SceneManager.GetActiveScene().name.Equals("main_menu")){
+			can_move = false;
+		}
+		if(stats == null){
+			stats = FindObjectOfType<player_stats>();
+		}
+
 		//moving check set
 		moving = false;
 
@@ -100,7 +113,7 @@ public class player_controller : MonoBehaviour {
 			}
 
 			//check for attack keypress
-			if(Input.GetKeyDown (KeyCode.J)){
+			if(Input.GetKeyDown(KeyCode.J)){
 				//if the player has a weapon
 				if(transform.Find("Weapon").gameObject.activeSelf){
 					//timer
@@ -117,28 +130,25 @@ public class player_controller : MonoBehaviour {
 					sfx_man.player_attack.Play();
 				}
 			}
-			if(Input.GetKeyDown (KeyCode.B)){
+			if(Input.GetKeyDown(KeyCode.B)){
 				//if the player has a shield
 				if(transform.Find("Shield").gameObject.activeSelf){
-					//timer
-					block_time_counter = block_time;
-					blocking = true;
-
 					//rigid body
 					rigid_body.velocity = Vector2.zero;
 
 					//animator
+					blocking = true;
 					anim.SetBool("block", blocking);
 
 					//no sfx here, occurs when hit from enemy occurs
-					if(stats.current_defence == 0){
+					if(stats.defence_levels[stats.current_level] == 0){
 						stats.current_defence = block_modifier;
 					}else{
-						stats.current_defence = stats.current_defence * block_modifier;
+						stats.current_defence = stats.defence_levels[stats.current_level] * block_modifier;
 					}
 				}
 			}
-			if(Input.GetKeyDown (KeyCode.H)){
+			if(Input.GetKeyDown(KeyCode.H)){
 				//if the player has any potions
 				if(phm.potion_amount() > 0){
 					//timer
@@ -158,7 +168,7 @@ public class player_controller : MonoBehaviour {
 				}
 			}
 		}
-
+		
 		//decrement counter or end attack
 		if (attack_time_counter > 0) {
 			attack_time_counter -= Time.deltaTime;
@@ -166,13 +176,11 @@ public class player_controller : MonoBehaviour {
 			attacking = false;
 			anim.SetBool("attack", attacking);
 		}
-		//decrement counter or end block
-		if (block_time_counter > 0) {
-			block_time_counter -= Time.deltaTime;
-		} else if (block_time_counter <= 0){
+		if(Input.GetKeyUp(KeyCode.B)){
+			//if the player has a shield
 			blocking = false;
 			anim.SetBool("block", blocking);
-			stats.current_defence = stats.current_defence / block_modifier;
+			stats.current_defence = stats.defence_levels[stats.current_level];
 		}
 		//decrement counter or end heal
 		if (heal_time_counter > 0) {

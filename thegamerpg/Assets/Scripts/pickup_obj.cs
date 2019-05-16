@@ -10,20 +10,22 @@ public class pickup_obj : MonoBehaviour{
         }
         //add health potion
         if(gameObject.name.Equals("health_potion")){
-            the_player.phm.add_potion();
+            player_health_manager phm = FindObjectOfType<player_health_manager>();
+            phm.add_potion(1);
             return;
         }
         if(gameObject.name.Contains("gold")){
-            //add gold instead (DUMMY)
+            //add gold
             string g_name = gameObject.name;
+            player_stats stats = FindObjectOfType<player_stats>();
             if(g_name.Contains("small")){
-                //
+                stats.gold += 1;
             }else if(g_name.Contains("medium")){
-                //
+                stats.gold += 5;
             }else if(g_name.Contains("large")){
-                //
+                stats.gold += 10;
             }else if(g_name.Contains("massive")){
-                //
+                stats.gold += 50;
             }
             return;
         }
@@ -33,21 +35,20 @@ public class pickup_obj : MonoBehaviour{
         pickup_obj[] current_objects = the_player.GetComponentsInChildren<pickup_obj>();
         foreach(pickup_obj x in player_objects){
             if(x.gameObject.name.Equals(gameObject.name)){
-                //check if parent active
-                if(!x.transform.parent.gameObject.activeSelf){
-                    //activate new item & parent
+                //catch first weapon and first shield
+                if(!x.transform.parent.gameObject.activeSelf && (x.transform.parent.gameObject.name.Equals("Weapon") || x.transform.parent.gameObject.name.Equals("Shield"))){
                     x.transform.parent.gameObject.SetActive(true);
-                    x.gameObject.SetActive(true);
-                }else{
-                    //deactivate current item
-                    pickup_obj xx = x.transform.parent.GetComponentInChildren<pickup_obj>();
-                    if(xx != null){
-                        xx.gameObject.SetActive(false);
-                    }
-
-                    //activate new item
-                    x.gameObject.SetActive(true);
                 }
+
+                //get all active in parent & deactivate
+                pickup_obj xx = x.transform.parent.GetComponentInChildren<pickup_obj>();
+                if(xx != null){
+                    xx.gameObject.SetActive(false);
+                }
+
+                //activate new item
+                x.gameObject.SetActive(true);
+                
                 //end loop prematurely
                 continue;
             }

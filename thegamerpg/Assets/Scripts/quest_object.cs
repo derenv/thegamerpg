@@ -15,7 +15,7 @@ public class quest_object : MonoBehaviour {
 
 	public bool is_enemy_quest;
 	public string target_enemy;
-	private int current_kill_amount;
+	public int current_kill_amount;
 	public int total_kill_amount;
 
 	/* Start method
@@ -47,13 +47,33 @@ public class quest_object : MonoBehaviour {
 	}
 
 	public void start_quest(){
+		//activate quest
 		gameObject.SetActive(true);
+
+		//log quest as started
 		qm.show_quest_dialogue(start_text);
 	}
 
 	public void end_quest(){
-		gameObject.SetActive(false);
+		//log quest as finished
 		qm.quests_completed[quest_id] = true;
 		qm.show_quest_dialogue(end_text);
+
+		//if manual trigger exists call it
+		if(GetComponentInChildren<quest_trigger>() != null){
+			quest_trigger x = GetComponentInChildren<quest_trigger>();
+			x.manual_trigger();
+		}
+
+		//activate any loot areas
+		loot_area[] areas = FindObjectsOfType<loot_area>();
+		foreach(loot_area x in areas){
+			if(x.quest_required == quest_id){
+				x.gameObject.SetActive(true);
+			}
+		}
+		
+		//deactivate quest
+		gameObject.SetActive(false);
 	}
 }

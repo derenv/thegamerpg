@@ -18,11 +18,4 @@ public class audio_controller : MonoBehaviour{
 			Destroy(gameObject);
 		}
     }
-
-    /* Update method
-	 * called once per frame
-	 */
-    void Update(){
-        //
-    }
 }

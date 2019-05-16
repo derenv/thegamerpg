@@ -17,4 +17,10 @@ public class bounds : MonoBehaviour {
 			the_camera.set_bounds (the_bounds);
 		}
 	}
+
+	public void find_camera(){
+		if(the_camera != null){
+			the_camera.set_bounds (the_bounds);
+		}
+	}
 }

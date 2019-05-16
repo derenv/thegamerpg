@@ -74,6 +74,48 @@ TextureImporter:
   - first:
       213: -3400608938371207273
     second: Orc_Boss_23
+  - first:
+      213: 2095804431317818434
+    second: Orc_Boss_24
+  - first:
+      213: 3341695869311612795
+    second: Orc_Boss_25
+  - first:
+      213: -118406759678710047
+    second: Orc_Boss_26
+  - first:
+      213: -5290360038954064038
+    second: Orc_Boss_27
+  - first:
+      213: -6697056431284815365
+    second: Orc_Boss_28
+  - first:
+      213: 6111788415067901005
+    second: Orc_Boss_29
+  - first:
+      213: 883248017229192618
+    second: Orc_Boss_30
+  - first:
+      213: 7045369020445453651
+    second: Orc_Boss_31
+  - first:
+      213: -1494164337040428424
+    second: Orc_Boss_32
+  - first:
+      213: 3831259331598970248
+    second: Orc_Boss_33
+  - first:
+      213: 1181953086108434861
+    second: Orc_Boss_34
+  - first:
+      213: -4451263552112641316
+    second: Orc_Boss_35
+  - first:
+      213: 891832164769053507
+    second: Orc_Boss_36
+  - first:
+      213: 6056370750833185157
+    second: Orc_Boss_37
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -193,7 +235,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 128
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -203,7 +245,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1089921cd3259c115bccc6f5dc1d931a
+      spriteID: 9119bf87f66bca2bfbd6d79cb2758209
       internalID: -7212712253541484580
       vertices: []
       indices: 
@@ -214,7 +256,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 128
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -224,7 +266,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7cbd5c277b5e577d883e6e44ff36b12
+      spriteID: e6f6ff43058b733ec912501c817a6431
       internalID: -8920739483014458474
       vertices: []
       indices: 
@@ -235,7 +277,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 128
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -245,7 +287,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd1e9c0e05b99c564bb6a5a54d6b38ac
+      spriteID: 10e3d0cd8e8e6a281a4334a66502b1c4
       internalID: 1064330613057909174
       vertices: []
       indices: 
@@ -256,7 +298,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 128
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -266,7 +308,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0516be566a561dc4382ad55ca699fb21
+      spriteID: 2e2e359f884b70c4591649f316fe81aa
       internalID: -2714002647878052355
       vertices: []
       indices: 
@@ -277,6 +319,174 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23c4a3cc9c208edb8a24ae12352c4ec4
+      internalID: -12008814772708147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Boss_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12c41a256f2f2afa8a81c2cd46fa0b6b
+      internalID: 4920236940104271564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Boss_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dd382ee6a755a6528ee2fae777ba09d
+      internalID: -2211045744901549361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Boss_7
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40fe366790e970a05b5eef772f553cbf
+      internalID: -1348425728148054315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Boss_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14e91b298cda074aeb125242dcc88a5c
+      internalID: -8837889598751616817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Boss_9
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa145fbd4f9aacaf28949e7f6dd76a67
+      internalID: 6543245126666139618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Boss_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 492bf270c8e3508a793d9151f6454105
+      internalID: -1644326221420113686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Boss_11
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be7f5da236d55ababa4a9f077f13cb28
+      internalID: 1771230493547681807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Boss_12
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 128
         width: 32
         height: 32
@@ -287,175 +497,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8b906c23f73b5be1adde33c5e874ad2
-      internalID: -12008814772708147
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Orc_Boss_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 62a30350cd176e7349574020126496c0
-      internalID: 4920236940104271564
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Orc_Boss_6
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 08cac088cc4406c818a2beda39925fbe
-      internalID: -2211045744901549361
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Orc_Boss_7
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1c0f07607e298b8839815fc7f2f1e0e3
-      internalID: -1348425728148054315
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Orc_Boss_8
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7d6197fb5748a13f58b2ff722bfb6496
-      internalID: -8837889598751616817
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Orc_Boss_9
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3e3defe1565c0e93f966997e13eee7bb
-      internalID: 6543245126666139618
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Orc_Boss_10
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 67357f3508f730c61874480468627cc0
-      internalID: -1644326221420113686
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Orc_Boss_11
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b88a245ecd43ac29b83d210f99824d5c
-      internalID: 1771230493547681807
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Orc_Boss_12
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 856c22534f87d86f5a7616090d50594f
+      spriteID: 4e4e357082fec968cafddfb3da26da85
       internalID: 8257232858995326717
       vertices: []
       indices: 
@@ -465,8 +507,8 @@ TextureImporter:
       name: Orc_Boss_13
       rect:
         serializedVersion: 2
-        x: 96
-        y: 64
+        x: 32
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -476,7 +518,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1d06a7d4c5817a40af96b1d30bb15d8
+      spriteID: 899d140c71b85c1acb02014791c9b974
       internalID: -8751246152431201716
       vertices: []
       indices: 
@@ -486,6 +528,300 @@ TextureImporter:
       name: Orc_Boss_14
       rect:
         serializedVersion: 2
+        x: 64
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6008d9847fb8c4019e6c21f97f5cca6
+      internalID: 5474368821606479459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Boss_15
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 311de532319fc2261af42e0f351fdd8f
+      internalID: -5945107067048269615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Boss_16
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2117edd2bd1ff382abc224ac84b020dd
+      internalID: -6083340137910414840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Boss_17
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b17aa83089f3ce4d38af41f0228e182c
+      internalID: -911247579898783709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Boss_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61d35649df0c0c124a4eaa98b0dc7a44
+      internalID: 4040209895239452110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Boss_19
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 405c799f3e5377edd876420079d319a7
+      internalID: -362255666328849784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Boss_20
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 428696d374a96da5f9289e97035776a8
+      internalID: -2645439262166971709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Boss_21
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 014093cf27db3d21d8c3f172b6300669
+      internalID: 8088831139688867284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Boss_22
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33c8d42a52d8afd238129d3f8cf14356
+      internalID: -8104185658790297547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Boss_23
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94b26dba3b80cb25e9ee35863c67c5da
+      internalID: -3400608938371207273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Boss_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24c8ac7b893f18508acc752ff8653fcb
+      internalID: 2095804431317818434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Boss_25
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc578bf53905fa55282e7d9195886bf3
+      internalID: 3341695869311612795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Boss_26
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d649c33a153683c86a14f5a24b0f021a
+      internalID: -118406759678710047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Boss_27
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10788f6e4625599a1866519770c961fd
+      internalID: -5290360038954064038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Boss_28
+      rect:
+        serializedVersion: 2
         x: 128
         y: 64
         width: 32
@@ -497,14 +833,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 859887a667e71eca599b9c9cc8a8049c
-      internalID: 5474368821606479459
+      spriteID: b68c4fdf3c3a1fef2b1f00c2196ad974
+      internalID: -6697056431284815365
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Orc_Boss_15
+      name: Orc_Boss_29
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 999817c1f6eddef618f3b444770b84ee
+      internalID: 6111788415067901005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Boss_30
       rect:
         serializedVersion: 2
         x: 0
@@ -518,14 +875,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b8ecd766f83960cfb03ce44406c5398
-      internalID: -5945107067048269615
+      spriteID: 661d5ee73766aff7abfe6526fc02639c
+      internalID: 883248017229192618
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Orc_Boss_16
+      name: Orc_Boss_31
       rect:
         serializedVersion: 2
         x: 32
@@ -539,14 +896,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7de0c290c892b008aba9545a0fd67628
-      internalID: -6083340137910414840
+      spriteID: e66b80992c29d653aa28190ef26f9d89
+      internalID: 7045369020445453651
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Orc_Boss_17
+      name: Orc_Boss_32
       rect:
         serializedVersion: 2
         x: 64
@@ -560,14 +917,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd1945be2728ac23b9e53dbbcbca2620
-      internalID: -911247579898783709
+      spriteID: c989eb44b49ec1d109cb4f17f045bc62
+      internalID: -1494164337040428424
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Orc_Boss_18
+      name: Orc_Boss_33
       rect:
         serializedVersion: 2
         x: 96
@@ -581,14 +938,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45f07fd4a8dc84b2ebb6c4a07012c5d1
-      internalID: 4040209895239452110
+      spriteID: 23251069807adac61b68968bf16de74c
+      internalID: 3831259331598970248
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Orc_Boss_19
+      name: Orc_Boss_34
       rect:
         serializedVersion: 2
         x: 128
@@ -602,14 +959,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7500428e444ad658c8e351ce05e6db01
-      internalID: -362255666328849784
+      spriteID: 06c92785185e6e95288ba4daa1d46bf9
+      internalID: 1181953086108434861
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Orc_Boss_20
+      name: Orc_Boss_35
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0135be3510e7f4d328f5935c2a40ac8e
+      internalID: -4451263552112641316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Boss_36
       rect:
         serializedVersion: 2
         x: 0
@@ -623,14 +1001,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a2f358d26224f03ea992557af6b66e8
-      internalID: -2645439262166971709
+      spriteID: 879b0b1e93c6947ad92f388abbc14d01
+      internalID: 891832164769053507
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Orc_Boss_21
+      name: Orc_Boss_37
       rect:
         serializedVersion: 2
         x: 32
@@ -644,50 +1022,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c23d7e9c04f119855906de9b4f0c7820
-      internalID: 8088831139688867284
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Orc_Boss_22
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b3d0e05f5c765b52ea44887fb8ab43bc
-      internalID: -8104185658790297547
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Orc_Boss_23
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 30116de435cd3d0c39f59c57343574b1
-      internalID: -3400608938371207273
+      spriteID: 0ac1bc474ae9f0892a48baf28247a2f9
+      internalID: 6056370750833185157
       vertices: []
       indices: 
       edges: []

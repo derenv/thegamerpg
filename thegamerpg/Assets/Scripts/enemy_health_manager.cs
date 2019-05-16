@@ -12,6 +12,8 @@ public class enemy_health_manager : MonoBehaviour {
 	public quest_manager qm;
 	public string enemy_name;
 
+	private UI_manager ui;
+
 	/* Start method
 	 * called on initialization
 	 */
@@ -21,16 +23,34 @@ public class enemy_health_manager : MonoBehaviour {
 		the_player_stats = FindObjectOfType<player_stats>();
 
 		qm = FindObjectOfType<quest_manager>();
+
+		ui = FindObjectOfType<UI_manager>();
 	}
 
 	/* Update method
 	 * called once per frame
 	 */
 	void Update(){
+		if(gameObject.name.Equals("Boss")){
+			ui.boss_hp_bar.gameObject.SetActive(true);
+			if(ui == null){
+				ui = FindObjectOfType<UI_manager>();
+			}
+			ui.boss_hp_bar.maxValue = max_health;
+			ui.boss_hp_bar.value = current_health;
+		}
+
+		if(the_player_stats == null){
+			the_player_stats = FindObjectOfType<player_stats>();
+		}
 		if(current_health <= 0){
 			qm.enemy_killed = enemy_name;
 
 			Destroy(gameObject);
+
+			if(gameObject.name.Equals("Boss")){
+				ui.boss_hp_bar.gameObject.SetActive(false);
+			}
 
 			the_player_stats.add_xp(xp);
 		}

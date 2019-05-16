@@ -7,14 +7,16 @@ public class UI_manager : MonoBehaviour {
 	//globals
 	public Slider health_bar;
 	public Slider xp_bar;
+	public Slider boss_hp_bar;
 	public Text hp_text;
 	public Text xp_text;
 	public Text lvl_text;
 	public Text potion_text;
 	public Text gold_text;
-	public player_health_manager player_health;
+	private player_health_manager player_health;
 	private player_stats the_player_stats;
 	private static bool ui_exists;
+	public Text space_prompt;
 
 	/* Start method
 	 * called on initialization
@@ -28,7 +30,19 @@ public class UI_manager : MonoBehaviour {
 			Destroy(gameObject);
 		}
 
+		player_health = FindObjectOfType<player_health_manager>();
 		the_player_stats = GetComponent<player_stats>();
+		boss_hp_bar.gameObject.SetActive(false);
+	}
+
+	public void reset(){
+		ui_exists = false;
+		Destroy(gameObject);
+	}
+
+	public void toggle_prompt(bool value){
+		space_prompt space = space_prompt.GetComponent<space_prompt>();
+		space.toggle_prompt(value);
 	}
 	
 	/* Update method

@@ -6,19 +6,18 @@ public class dialogue_holder : MonoBehaviour {
 	//globals
 	public string[] dialogue;
 	private dialogue_manager dm;
+	private UI_manager ui;
 
 	/* Start method
 	 * called on initialization
 	 */
 	void Start(){
 		dm = FindObjectOfType<dialogue_manager>();
+		ui = FindObjectOfType<UI_manager>();
 	}
-	
-	/* Update method
-	 * called once per frame
-	 */
-	void Update(){
-		//
+
+	private void OnTriggerExit2D(Collider2D other) {
+		ui.toggle_prompt(false);
 	}
 
 	void OnTriggerStay2D(Collider2D other){
@@ -29,7 +28,7 @@ public class dialogue_holder : MonoBehaviour {
 				}
 			}else{
 				//show spacebar prompt
-				//
+				ui.toggle_prompt(true);
 			}
 		}
 	}

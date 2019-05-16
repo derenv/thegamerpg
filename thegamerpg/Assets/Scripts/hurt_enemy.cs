@@ -24,7 +24,9 @@ public class hurt_enemy : MonoBehaviour {
 	 * called once per frame
 	 */
 	void Update(){
-		//
+		if(the_player_stats == null){
+			the_player_stats = FindObjectOfType<player_stats>();
+		}
 	}
 
 	/* 

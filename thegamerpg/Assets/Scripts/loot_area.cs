@@ -14,25 +14,19 @@ public class loot_area : MonoBehaviour{
         qm = FindObjectOfType<quest_manager>();
 
         //if drop not found before
-        if(!the_player.drops[drop_number]){
-            //if quest requirements met
-            if(qm.quests_completed[quest_required]){
-                gameObject.SetActive(true);
-            }else{
-                gameObject.SetActive(false);
-            }
-        }else{
+        if(the_player.drops[drop_number]){
             gameObject.SetActive(false);
         }
     }
 
     void OnTriggerStay2D(Collider2D other){
         if(other.name.Equals("Player")){
-            if(gameObject.activeSelf){
+            if(qm.quests_completed[quest_required]){
                 pickup_obj[] items = GetComponentsInChildren<pickup_obj>(true);
                 foreach(pickup_obj item in items){
                     item.pickup_item(the_player);
                 }
+                the_player.drops[drop_number] = true;
                 gameObject.SetActive(false);
             }
         }

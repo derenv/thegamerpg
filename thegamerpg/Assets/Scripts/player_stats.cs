@@ -21,9 +21,9 @@ public class player_stats : MonoBehaviour {
 	 * called on initialization
 	 */
 	void Start () {
-		current_hp = hp_levels [1];
-		current_attack = attack_levels [1];
-		current_defence = defence_levels [1];
+		current_hp = hp_levels [current_level];
+		current_attack = attack_levels [current_level];
+		current_defence = defence_levels [current_level];
 		gold = 0;
 
 		player_health = FindObjectOfType<player_health_manager>();

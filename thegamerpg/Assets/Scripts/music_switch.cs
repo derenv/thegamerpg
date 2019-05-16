@@ -25,13 +25,12 @@ public class music_switch : MonoBehaviour {
 	 * called once per frame
 	 */
 	void Update(){
-		
+		//
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
-		if(other.gameObject.name == "Player"){
+		if(other.gameObject.name == "Player" && mc.current_track != new_track){
 			mc.switch_track(new_track);
-			gameObject.SetActive(false);
 		}
 	}
 }

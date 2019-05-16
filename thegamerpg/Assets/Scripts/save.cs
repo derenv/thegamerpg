@@ -9,7 +9,8 @@ public class save{
     public string[] coords;
 
     //enemies
-    //name-health-coordx-coordy
+    public string[][] enemies;
+    //name-active-health-coordx-coordy
 
     //player stats
     public string name;
@@ -20,15 +21,17 @@ public class save{
     public int gold;
 
     //player equipment
-    public string[] armour;
-    public string weapon;
-    public string shield;
+    public string[] equipment;
 
     //player quests
     public int current_quest;
-    public int enemies;
-    
-	private int current_kills;
-    public int[] quests_completed;//cannot store bools, instead 1/0s
+    public int[] quests_completed;
+    public int[][] misc_quests;
+
+    //requirements
+	public int current_count;
+
+    //loot areas & keys
     public int[] drops;
+    public int[] keys;
 }

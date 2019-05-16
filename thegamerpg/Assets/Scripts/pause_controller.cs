@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class pause_controller : MonoBehaviour{
     //globals
 	private player_controller the_player;
     public bool stopped;
     private dialogue_manager dm;
+    private settings_ui_manager sum;
 
     void Start() {
         stopped = false;
@@ -15,14 +17,25 @@ public class pause_controller : MonoBehaviour{
     }
     
     void Update() {
-        //check for escape char
-        if(!dm.active){
-            if(!stopped && Input.GetKeyUp(KeyCode.Escape)){
-                stopped = true;
-                stop_movement();
-            }else if(stopped && Input.GetKeyUp(KeyCode.Escape)){
-                stopped = false;
-                start_movement();
+		if(!SceneManager.GetActiveScene().name.Equals("main_menu")){
+            if(dm == null){
+                dm = FindObjectOfType<dialogue_manager>();
+            }
+            //check for escape char
+            if(!dm.active){
+                sum = FindObjectOfType<settings_ui_manager>();
+                if(!stopped && Input.GetKeyUp(KeyCode.Escape)){
+                    stopped = true;
+                    stop_movement();
+                    sum.change_button_group(2);
+                }else if(stopped && Input.GetKeyUp(KeyCode.Escape)){
+                    //paused
+                    if(sum.button_group == 2){
+                        stopped = false;
+                        start_movement();
+                        sum.change_button_group(0);
+                    }
+                }
             }
         }
     }

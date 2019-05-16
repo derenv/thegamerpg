@@ -15,6 +15,7 @@ public class key_lock : MonoBehaviour{
 
     void OnTriggerStay2D(Collider2D other){
 		if(other.gameObject.name == "Player"){
+            //???MODIFY FOR SPACE ACTIVATED???
             //get player and check if they have the key
             player_controller player = other.gameObject.GetComponent<player_controller>();
             if(player.keys[key_num]){

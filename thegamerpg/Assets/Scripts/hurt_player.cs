@@ -22,6 +22,9 @@ public class hurt_player : MonoBehaviour {
 	 * initiates combat when colliding object is player
 	 */
 	void OnCollisionEnter2D(Collision2D other){
+		if(the_player_stats == null){
+			the_player_stats = FindObjectOfType<player_stats>();
+		}
 		if(other.gameObject.name == "Player"){
 			//calculate damage
 			current_damage = damage_to_give - the_player_stats.current_defence;

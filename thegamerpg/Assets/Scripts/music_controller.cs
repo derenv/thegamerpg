@@ -10,20 +10,6 @@ public class music_controller : MonoBehaviour {
 
 	public int current_track;
 	public bool music_playing;
-
-	/* Start method
-	 * called on initialization
-	 */
-	void Start () {
-		//avoid duplicates
-		/*
-		if(!mc_exists){
-			mc_exists = true;
-			DontDestroyOnLoad(transform.gameObject);
-		}else{
-			Destroy(gameObject);
-		}*/
-	}
 	
 	/* Update method
 	 * called once per frame

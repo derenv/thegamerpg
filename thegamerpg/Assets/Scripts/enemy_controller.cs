@@ -11,14 +11,17 @@ public class enemy_controller : MonoBehaviour {
 	public float time_to_move;
 	private float time_to_move_counter;
 
+	public float time_between_attack;
+	private float time_between_attack_counter;
+	public float time_to_attack;
+	private float time_to_attack_counter;
+
 	public Vector2 last_move;
 	public Vector2 move_direction;
 
 	private Animator anim;
 
 	private Rigidbody2D rigid_body;
-
-	//public float reload_wait;
 
 	public BoxCollider2D walk_zone;
 	private Vector2 min_walk_point;
@@ -46,6 +49,8 @@ public class enemy_controller : MonoBehaviour {
 		anim = GetComponent<Animator>();
 		time_between_move_counter = Random.Range(time_between_move * 0.75f,time_between_move * 1.25f);
 		time_to_move_counter = Random.Range(time_to_move * 0.75f,time_to_move * 1.25f);
+		time_between_attack_counter = Random.Range(time_between_attack * 0.75f,time_between_attack * 1.25f);
+		time_to_attack_counter = Random.Range(time_to_move * 0.75f,time_to_move * 1.25f);
 
 		//audio
 		sfx_man = FindObjectOfType<sfx_manager>();
@@ -72,10 +77,47 @@ public class enemy_controller : MonoBehaviour {
 		}
 
 		if(walk_zone_exists && (player_transform.position.y < max_walk_point.y) && (player_transform.position.x < max_walk_point.x) && (player_transform.position.y > min_walk_point.y) && (player_transform.position.x > min_walk_point.x)){
-			//rigid body
-			Vector3 new_pos = Vector3.MoveTowards(transform.position, player_transform.position, move_speed / 100);
-			last_move = new_pos - new Vector3(transform.position.x,transform.position.y);
-			transform.position = new_pos;
+			if (moving) {
+				//decrement counter
+				time_to_attack_counter -= Time.deltaTime;
+
+				Vector3 move_direction = Vector3.MoveTowards(transform.position, player_transform.position, move_speed / 50);
+				rigid_body.velocity = new Vector2(transform.position.x - move_direction.x, transform.position.y - move_direction.y);
+				//last_move = move_direction - new Vector3(transform.position.x,transform.position.y);
+
+				transform.position = move_direction;
+
+				//check counter
+				if(time_to_attack_counter < 0f){
+					//end movement
+					moving = false;
+
+					//setup move counters
+					time_between_attack_counter = Random.Range(time_between_attack * 0.75f,time_between_attack * 1.25f);
+
+					move_direction = Vector2.zero;
+				}
+			}else{
+				//decrement counter
+				time_between_attack_counter -= Time.deltaTime;
+
+				//reset physics
+				rigid_body.velocity = Vector2.zero;
+
+				//check counter
+				if(time_between_attack_counter < 0f){
+					//setup move counters & bools
+					moving = true;
+					time_to_attack_counter = Random.Range(time_to_move * 0.75f,time_to_move * 1.25f);
+
+					//create new physics body
+					Vector3 move_direction = Vector3.MoveTowards(transform.position, player_transform.position, move_speed / 50);
+					rigid_body.velocity = new Vector2(transform.position.x - move_direction.x, transform.position.y - move_direction.y);
+					last_move = move_direction - new Vector3(transform.position.x,transform.position.y);
+					//last_move = move_direction;
+					transform.position = move_direction;
+				}
+			}
 		}else{
 			//check if moving
 			if (moving) {
@@ -151,21 +193,21 @@ public class enemy_controller : MonoBehaviour {
 			anim.SetBool("attack", attacking);
 		}
 	}
+	
+	public void do_anim(){
+		//timer
+		attack_time_counter = attack_time;
+		attacking = true;
+        moving = false;
 
-	void OnTriggerEnter2D(Collider2D other){
-		if(other.gameObject.name == "Player"){
-			//timer
-			attack_time_counter = attack_time;
-			attacking = true;
+		//rigid body
+		rigid_body.velocity = Vector2.zero;
 
-			//rigid body
-			rigid_body.velocity = Vector2.zero;
+		//animator
+		anim.SetBool("attack", attacking);
+		anim.SetBool("moving", moving);
 
-			//animator
-			anim.SetBool("attack", true);
-
-			//sfx
-			sfx_man.player_attack.Play();
-		}
+		//sfx
+		sfx_man.player_attack.Play();
 	}
 }

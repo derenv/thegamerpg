@@ -26,25 +26,29 @@ public class camera_controller : MonoBehaviour {
 		//avoid duplicates
 		if(!exists){
 			exists = true;
-			DontDestroyOnLoad(transform.gameObject);
 		}else{
 			Destroy(gameObject);
 		}
 
 		//set bounds
-		min_bounds = bounds_box.bounds.min;
-		max_bounds = bounds_box.bounds.max;
+		if(bounds_box != null){
+			min_bounds = bounds_box.bounds.min;
+			max_bounds = bounds_box.bounds.max;
+		}
 
-		/*
-		//bounds alternate
-		//listen for scene change (and new bounds)
-		SceneManager.sceneLoaded += detect_new_bounds;
-		*/
+		player_controller the_player = FindObjectOfType<player_controller>();
+		this.transform.parent =	the_player.transform;
+		follow_target = the_player.gameObject;
 		
 		//set size
 		the_camera = GetComponent<Camera>();
 		half_height = the_camera.orthographicSize;
 		half_width = half_height * Screen.width / Screen.height;
+	}
+
+	public void reset(){
+		exists = false;
+		Destroy(gameObject);
 	}
 	
 	/* Update method
@@ -67,11 +71,4 @@ public class camera_controller : MonoBehaviour {
 		min_bounds = bounds_box.bounds.min;
 		max_bounds = bounds_box.bounds.max;
 	}
-	
-	/*
-	//bounds alternate
-	void detect_new_bounds(Scene scene, LoadSceneMode mode){
-		//detect and set new bounds
-	}
-	*/
 }

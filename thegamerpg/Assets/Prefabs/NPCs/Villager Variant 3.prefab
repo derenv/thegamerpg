@@ -2712,6 +2712,7 @@ GameObject:
   - component: {fileID: 6583184542226072193}
   - component: {fileID: 6583184542226072194}
   - component: {fileID: 2170650383395737429}
+  - component: {fileID: 1236318189238989978}
   m_Layer: 0
   m_Name: Villager Variant 3
   m_TagString: npc
@@ -2875,6 +2876,32 @@ MonoBehaviour:
   walk_zone: {fileID: 0}
   can_move: 0
   last_move: {x: 0, y: 0}
+--- !u!61 &1236318189238989978
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6583184542226072195}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2}
+  m_EdgeRadius: 0
 --- !u!1 &6583184542280684200
 GameObject:
   m_ObjectHideFlags: 0

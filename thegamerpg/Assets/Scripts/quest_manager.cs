@@ -18,11 +18,8 @@ public class quest_manager : MonoBehaviour {
 		quests_completed = new bool[quests.Length];
 	}
 	
-	/* Update method
-	 * called once per frame
-	 */
-	void Update () {
-		//
+	public void reset() {
+		quests_completed = new bool[quests.Length];
 	}
 
 	public void show_quest_dialogue(string[] quest_text){
